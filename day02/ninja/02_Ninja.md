@@ -56,14 +56,32 @@ A journey of a thousand miles begins with a single step
 ``` shell
 # How many lines in this file?
 # Your answer:
+  ```
+  grep -c "" ./NC-EST2015-AGESEX-RES.csv
+  307 
+  ```
 # Which fields (headers) are presented in this data file?
 # Your answer:
+  ```
+  grep "[A-Z]" ./NC-EST2015-AGESEX-RES.csv 
+
+  ```
 # How many types of SEX do you see in the data?
 # Your answer:
+  ```
+  
+  ```
 # How many lines of SEX=2 in the data? (Hint: use grep with pattern: ^2, )
 # Your answer:
+  ```
+   grep -c ^2 ./NC-EST2015-AGESEX-RES.csv 
+  ```
 # What's the POPESTIMATE2015 value of AGE=25 for different SEX? (Hint: think about the pattern before grep)
 # Your answers:
+  ```
+  grep -w 25  ./NC-EST2015-AGESEX-RES.csv | awk -F ',' '{print $9;}'
+  ```
+
 ```
 
 ``` shell
